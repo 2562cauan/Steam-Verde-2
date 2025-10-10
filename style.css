@@ -1,3 +1,39 @@
+/* Dropdown Categorias */
+.dropdown {
+    position: relative;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #388e3c;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: 0 0 8px 8px;
+    padding: 8px 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-link {
+    color: #e8f5e9;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.dropdown-link:hover {
+    background: #2e7d32;
+    color: #fff;
+}
 * {
             margin: 0;
             padding: 0;

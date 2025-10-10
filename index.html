@@ -24,6 +24,15 @@
                     <a href="#" class="nav-item">COMUNIDADE</a>
                     <a href="#" class="nav-item">SOBRE</a>
                     <a href="#" class="nav-item">SUPORTE</a>
+                    <div class="nav-item dropdown">
+                        CATEGORIAS <i class="fa fa-caret-down"></i>
+                        <div class="dropdown-content">
+                            <a href="#" class="dropdown-link" data-category="gratis">De graça</a>
+                            <a href="#" class="dropdown-link" data-category="tiro">Tiro</a>
+                            <a href="#" class="dropdown-link" data-category="mundoaberto">Mundo aberto</a>
+                            <a href="#" class="dropdown-link" data-category="dificil">Difícil</a>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -33,7 +42,7 @@
             <p>Bem-vindo à Steam Verde, sua plataforma premium para jogos digitais. Confira nossos lançamentos mais recentes e ofertas especiais.</p>
             
             <div class="game-grid">
-                <div class="game-card">
+                <div class="game-card" data-categorias="mundoaberto,dificil">
                     <div class="game-img">
                         <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg" alt="Capa do jogo The Witcher 3">
                     </div>
@@ -42,8 +51,7 @@
                         <div class="game-price">$ 39,99</div>
                     </div>
                 </div>
-                
-                <div class="game-card">
+                <div class="game-card" data-categorias="mundoaberto,tiro">
                     <div class="game-img">
                         <img src="https://upload.wikimedia.org/wikipedia/en/9/9f/Cyberpunk_2077_box_art.jpg" alt="Capa do jogo Cyberpunk 2077">
                     </div>
@@ -52,8 +60,7 @@
                         <div class="game-price">$ 49,99</div>
                     </div>
                 </div>
-                
-                <div class="game-card">
+                <div class="game-card" data-categorias="mundoaberto,dificil">
                     <div class="game-img">
                         <img src="https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg" alt="Capa do jogo Red Dead Redemption 2">
                     </div>
@@ -62,8 +69,7 @@
                         <div class="game-price">$ 59,99</div>
                     </div>
                 </div>
-                
-                <div class="game-card">
+                <div class="game-card" data-categorias="mundoaberto,tiro">
                     <div class="game-img">
                         <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="Capa do jogo Grand Theft Auto V">
                     </div>
@@ -72,49 +78,126 @@
                         <div class="game-price">$ 29,99</div>
                     </div>
                 </div>
-
-                <div class="game-card">
+                <div class="game-card" data-categorias="mundoaberto">
                     <div class="game-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/5/52/Stardew_Valley_cover_art.jpg" alt="Capa do jogo Stardew Valley">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Logo_of_Stardew_Valley.png" alt="Capa do jogo Stardew Valley">
                     </div>
                     <div class="game-info">
                         <div class="game-title">Stardew Valley</div>
                         <div class="game-price">$ 14,99</div>
                     </div>
                 </div>
-                 <div class="game-card">
+                <div class="game-card" data-categorias="dificil">
                     <div class="game-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/1/18/Dead_Cells_cover_art.jpg" alt="Capa do jogo Dead Cells">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShKTmb0jbkGX6cu0AM_KKEf5d8bGKpzNnJfw&s" alt="Capa do jogo Dead Cells">
                     </div>
                     <div class="game-info">
                         <div class="game-title">Dead Cells</div>
                         <div class="game-price">$ 24,99</div>
                     </div>
                 </div>
-
-                <div class="game-card">
+                <div class="game-card" data-categorias="gratis">
                     <div class="game-img">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Rocket_League_coverart.jpg" alt="Capa do jogo Rocket League">
                     </div>
                     <div class="game-info">
                         <div class="game-title">Rocket League</div>
-                        <div class="game-price">Grátis para Jogar</div>
+                        <div class="game-price">$ Grátis para jogar</div>
                     </div>
                 </div>
-                
-                <div class="game-card">
+                <div class="game-card" data-categorias="mundoaberto">
                     <div class="game-img">
-                        <img src="https://upload.wikimedia.org/wikipedia/en/8/82/Terraria_cover_art.jpg" alt="Capa do jogo Terraria">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/1/1a/Terraria_Steam_artwork.jpg" alt="Capa do jogo Terraria">
                     </div>
                     <div class="game-info">
                         <div class="game-title">Terraria</div>
                         <div class="game-price">$ 9,99</div>
                     </div>
                 </div>
+                <div class="game-card" data-categorias="mundoaberto,dificil">
+                    <div class="game-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgnt4quo4Q_kW7n7X0un0wq8bVVLdcJNoh8Q&s" alt="Capa do jogo The Witcher 3">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">Minecraft</div>
+                        <div class="game-price">$ 150,00</div>
+                    </div>
+                </div>
+                <div class="game-card" data-categorias="dificil">
+                    <div class="game-img">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTO5AM8Z5v5pdCUUb5AlyNvPv7_25GCOLDVsw&s" alt="Capa do jogo The Witcher 3">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">No, I am not a Human</div>
+                        <div class="game-price">$ 45,99</div>
+                    </div>
+                </div>
+                <div class="game-card" data-categorias="dificil">
+                    <div class="game-img">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/8/86/Hollow_Knight_Silksong_cover.jpeg" alt="Capa do jogo The Witcher 3">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">Hollow Knight:Silksong</div>
+                        <div class="game-price">$ 60,00</div>
+                    </div>
+                </div>
+                <div class="game-card" data-categorias="dificil">
+                    <div class="game-img">
+                        <img src="https://www.europanet.com.br/upload/id_produto/60_____/6001605g.jpg" alt="Capa do jogo The Witcher 3">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">Hollow Knight</div>
+                        <div class="game-price">$ 50,00</div>
+                    </div>
+                </div>
+                <div class="game-card" data-categorias="gratis,tiro">
+                    <div class="game-img">
+                        <img src="https://mediaproxy.tvtropes.org/width/1200/https://static.tvtropes.org/pmwiki/pub/images/valo2.png" alt="Capa do jogo The Witcher 3">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">Valorant</div>
+                        <div class="game-price">$ Grátis para jogar</div>
+                    </div>
+                </div>
+                <div class="game-card" data-categorias="mundoaberto,tiro">
+                    <div class="game-img">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/28/Assassin%27s_Creed_IV_-_Black_Flag_cover.jpg" alt="Capa do jogo The Witcher 3">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">Assasin's Creed: Black Flag</div>
+                        <div class="game-price">$ 39,99</div>
+                    </div>
+                </div>
+                <div class="game-card" data-categorias="gratis,tiro">
+                    <div class="game-img">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/8/81/World_of_Tanks_%282010%29.jpg" alt="Capa do jogo The Witcher 3">
+                    </div>
+                    <div class="game-info">
+                        <div class="game-title">World Of Tanks</div>
+                        <div class="game-price">$ Grátis para jogar</div>
+                    </div>
+                </div>
             </div>
         </div>
         
         <div class="footer">
+    <script>
+    // Filtragem de jogos por categoria
+    document.querySelectorAll('.dropdown-link').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const categoria = this.getAttribute('data-category');
+            document.querySelectorAll('.game-card').forEach(function(card) {
+                const cats = card.getAttribute('data-categorias');
+                if (!categoria || (cats && cats.split(',').includes(categoria))) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+    </script>
             © 2023 Steam Verde - Todos os direitos reservados
         </div>
     </div>
