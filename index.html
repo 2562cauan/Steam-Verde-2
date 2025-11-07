@@ -179,27 +179,82 @@
                 </div>
             </div>
         </div>
-        
         <div class="footer">
-    <script>
-    // Filtragem de jogos por categoria
-    document.querySelectorAll('.dropdown-link').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const categoria = this.getAttribute('data-category');
-            document.querySelectorAll('.game-card').forEach(function(card) {
-                const cats = card.getAttribute('data-categorias');
-                if (!categoria || (cats && cats.split(',').includes(categoria))) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    });
-    </script>
             © 2023 Steam Verde - Todos os direitos reservados
         </div>
     </div>
+    
+    <!-- Modal de detalhes (invisível por padrão) -->
+    <div id="details-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Fechar">&times;</button>
+            <div class="details-grid">
+                <div class="details-image">
+                    <img id="modal-img" src="" alt="Capa do jogo">
+                </div>
+                <div class="details-body">
+                    <h2 id="modal-game-title">Título do Jogo</h2>
+                    <div id="modal-game-price" class="game-price"></div>
+                    <div id="modal-game-cats" class="game-categories"></div>
+                    <p id="modal-game-desc">Descrição curta do jogo. Você pode adicionar mais informações aqui.</p>
+                    <div class="modal-actions">
+                        <button id="close-details" class="save-btn">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // Ao clicar em um .game-card abre um modal com detalhes do jogo
+    document.addEventListener('DOMContentLoaded', function(){
+        var modal = document.getElementById('details-modal');
+        var modalTitle = document.getElementById('modal-game-title');
+        var modalImg = document.getElementById('modal-img');
+        var modalPrice = document.getElementById('modal-game-price');
+        var modalCats = document.getElementById('modal-game-cats');
+        var modalDesc = document.getElementById('modal-game-desc');
+
+        document.querySelectorAll('.game-card').forEach(function(card){
+            card.style.cursor = 'pointer';
+            card.addEventListener('click', function(e){
+                // Prepara e abre o modal com informações do card
+                var imgEl = card.querySelector('.game-img img');
+                modalImg.src = imgEl ? imgEl.src : '';
+                modalImg.alt = imgEl ? imgEl.alt : '';
+                modalTitle.textContent = card.querySelector('.game-title') ? card.querySelector('.game-title').textContent : '';
+                modalPrice.textContent = card.querySelector('.game-price') ? card.querySelector('.game-price').textContent : '';
+                modalCats.textContent = 'Categorias: ' + (card.dataset.categorias || '—');
+                // descrição placeholder (pode ser personalizada por jogo futuramente)
+                modalDesc.textContent = 'Descrição: Aqui vai uma descrição curta do jogo. (substitua conforme necessário).';
+
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden','false');
+            });
+        });
+
+        // Fechar modal por botões/overlay/ESC
+        document.body.addEventListener('click', function(e){
+            if(e.target.matches('.modal-close') || e.target.matches('#close-details')){
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden','true');
+            }
+        });
+
+        modal.addEventListener('click', function(e){
+            if(e.target === modal){
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden','true');
+            }
+        });
+
+        document.addEventListener('keydown', function(e){
+            if(e.key === 'Escape' && modal.classList.contains('open')){
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden','true');
+            }
+        });
+    });
+    </script>
 </body>
 </html>
